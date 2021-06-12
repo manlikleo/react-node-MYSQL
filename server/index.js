@@ -22,15 +22,16 @@ db.sequelize.sync({ force: true }).then(() => {
 });
 
 app.get("/", (req,res)=>{
-    res.json({message:"server serving from port 8081"});
+    res.json({message:"server serving from port 8080"});
 });
 
 
 require("../server/routes/tutorial.routes")(app);
 
 
-const PORT = process.env.PORT || 8080 ;
-app.listen(PORT, ()=> {
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 })
 
