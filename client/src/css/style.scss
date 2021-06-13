@@ -1,0 +1,190 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.active{
+    background: orchid;
+    color: white;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color: purple;
+
+    &__wrapper{
+        padding: 0 1rem;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        text-decoration: none;
+        color: #FFF;
+        font-weight: 500;
+    }
+
+    &__navitems{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+    &__navitem{
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.submit{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+
+    &__form{
+        display: flex;
+        width: 45%;
+        padding: 2rem;
+        height: fit-content;
+        flex-direction: column;
+        background-color: rgba(128, 0, 128, 0.274);
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__formcontainer{
+        margin: 1rem 0;
+        display: flex;
+        width: 80%;
+        // align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__label{
+        font-size: 1.6rem;
+    }
+
+    &__input{
+        height: 2rem;
+        width: 100%;
+        margin: .5rem 0;
+        padding: 0rem .5rem;
+    }
+
+    &__btncontainer{
+        display: flex;
+        width: 80%;
+    }
+    &__btn{
+        align-self:left;
+        border: none;
+        padding: .5rem 1.2rem;
+        background-color: purple;
+        color: #FFF;
+    }
+
+    &__message{
+        margin-right: 2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &__container{
+        margin:1rem 0;
+    }
+
+    &__smallbtn{
+        margin: 0 .5rem;
+    }
+
+
+}
+
+.container{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: .5rem 2rem;
+
+    &__search{
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__searchcom{
+        height: 2rem;
+        width: 70%;
+        border: .5px solid purple;
+        padding: .3rem;
+    }
+
+    &__btn{
+        width: 24%;
+        padding: .6rem 1.6rem;
+        border: none;
+    }
+
+    &__content{
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    &__list{
+        width: 45%;
+    }
+
+    &__listtitle{
+        margin-bottom: 1rem;
+    }
+
+    &__card{
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid purple;
+
+        &:hover{
+            background: orchid;
+            color: white;
+        }
+    }
+
+    &__clearbtn{
+        padding: .5rem 1.2rem;
+        border: none;
+        background-color: red;
+        color: white;
+    }
+    &__information{
+        width: 45%;
+    }
+
+    &__infotitle{
+        margin-bottom: 1rem;
+    }
+    &__contentinfo{
+        margin-bottom:1rem;
+    }
+    &__editbtn{
+        padding: .2rem .4rem;
+        background: orange;
+        border: none;
+    }
+    
+}
+

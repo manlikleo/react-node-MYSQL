@@ -1,6 +1,6 @@
 
 // database variables 
-const db = require ('../models')
+const db = require ('../models'),
 Tutorials = db.tutorials,
 Op = db.Sequelize.Op; 
 
@@ -46,6 +46,7 @@ exports.create =(req,res)=> {
 // find all tutorials 
 exports.findAll =(req,res)=> {
     const title = req.query.body; 
+    console.log(title);
 
     // conditional to query the Tutorial database
     let condition = title ? {title: {[Op.like]: `%${title}%`}} : null; 
@@ -53,6 +54,7 @@ exports.findAll =(req,res)=> {
     Tutorials.findAll({where: condition})
     .then(data => {
         res.send(data);
+       
     })
     .catch(err => {
         res.status(500).send({
@@ -66,11 +68,12 @@ exports.findAll =(req,res)=> {
 //find one tutorial
 exports.findOne =(req,res)=> {
     const id = req.params.id;
-
+    console.log(id);
     // get query 
-    Tutorials.findByPK(id)
+    Tutorials.findByPk(id)
     .then(data => {
         res.send(data);
+
     })
 
     .catch(err => {

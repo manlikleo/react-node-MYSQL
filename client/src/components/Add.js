@@ -61,28 +61,34 @@ const Add = () => {
     return(
 
         // submitted 
-        <div className="submit__container"> 
+        <div className="submit"> 
+
+
             {submitted ? 
             (
-                <div> 
-                    <span>You submitted successfully !</span>
+                <div className="submit__wrapper"> 
+                    <span className="submit__message">You submitted successfully !</span>
                     <button className="submit__btn" onClick={newTutorial}>Add New</button>
                 </div>   
             )
             : (
 
                 <div className="submit__form">
-                    <div className="submit__formcontainer">
-                        <label className="submit__label">Title:</label>
-                        <input type="text" className="submit__input" required value={tutorial.title} name="title" onChange={handleInputChange}/>
-                    </div>
-
-                    <div className="submit__formcontainer">
-                        <label className="submit__label">Description:</label>
-                        <input type="text" className="submit__input" required value={tutorial.description} name="description" onChange={handleInputChange}/>
-                    </div>
-                    <button onClick={saveTutorial} className="submit__btn"> Save Tutorial</button>
                     
+                        <div className="submit__formcontainer">
+                            <label className="submit__label">Title:</label>
+                            <input type="text" className="submit__input" required value={tutorial.title} name="title" onChange={handleInputChange} placeholder="Enter Title"/>
+                        </div>
+
+                        <div className="submit__formcontainer">
+                            <label className="submit__label">Description:</label>
+                            <input type="text" className="submit__input"  value={tutorial.description} name="description" onChange={handleInputChange} placeholder="Enter description" required/>
+                        </div>
+
+                        <div className="submit__btncontainer">
+                            <button onClick={saveTutorial} className="submit__btn"> Save Tutorial</button>
+                        </div>      
+                   
                 </div>
             )}
         </div>

@@ -13,11 +13,13 @@ function App() {
       <div className="App">
 
         <nav className="navbar">
-            <a className="navbar__logo" href="/tutorials">Node Joke App</a>
-            <ul className="navbar__navitems">
-              <li className="navbar__navitem"><Link  to={"/tutorials"} className="navbar__navlinks">view Tutorials</Link></li>
-              <li className="navbar__navitem"><Link className="navbar__navlinks" to={"/add"}>Add course</Link></li>
-            </ul>
+            <div className="navbar__wrapper">
+                <a className="navbar__logo" href="/tutorials">Node Joke App</a>
+                <ul className="navbar__navitems">
+                  <li ><Link className="navbar__navitem"  to={"/tutorials"}>View Tutorials</Link></li>
+                  <li ><Link className="navbar__navitem" to={"/add"}>Add course</Link></li>
+                </ul>
+            </div>
         </nav>
         <div> 
           <Switch>
